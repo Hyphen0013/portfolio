@@ -1,7 +1,7 @@
-$primary-color: #444;
+$primary-color: #333;
 $secondary-color: #22b8cf;
 $show-home-image: true;
-$home-image: url(../images/background.jpg);
+$home-image: url('../images/background.jpg');
 $background-opacity: 0.9;
 
 @mixin easeOut {
@@ -27,4 +27,41 @@ $background-opacity: 0.9;
       }
     }
   }
+}
+
+// Set Text Color 
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+  
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+  
+}
+
+@mixin mediaLg {
+  @media screen and (max-width: 768px) and (max-width: 1170px) {
+    @content;
+  }
+  
+}
+
+@mixin mediaXl{
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+  
 }
