@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is simple portfolio website",
   "main": "app.js",
+  "homepage": "https://Hyphen0013.github.io/portfolio",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
@@ -10,6 +11,7 @@
   "author": "Hyphen",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }
 }
